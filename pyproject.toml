@@ -4,4 +4,14 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "gpt-researcher>=0.14.0",
+    "python-dotenv",
+    "fastmcp>=2.8.0",
+    "fastapi>=0.103.1",
+    "uvicorn>=0.23.2",
+    "pydantic>=2.3.0",
+    "loguru>=0.7.0",
+    "httpx>=0.24.0",
+    "sseclient-py>=1.7.0",
+]

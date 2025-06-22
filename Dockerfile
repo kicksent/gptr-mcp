@@ -15,6 +15,10 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /usr/local/bin/
 COPY pyproject.toml .
 RUN uv sync --no-dev
 
+# If there's a requirements.txt, install it as fallback with --system flag
+COPY requirements.txt .
+RUN uv pip install --system -r requirements.txt
+
 # Copy application code
 COPY . .
 
